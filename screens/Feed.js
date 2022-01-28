@@ -39,14 +39,18 @@ export default class Feed extends Component {
   }
 
   renderItem = ({ item: story }) => {
-    return <StoryCard story={story} />;
+    return (
+    <StoryCard story={story} />
+    );
   };
 
   keyExtractor = (item, index) => index.toString();
 
   render() {
     if (!this.state.fontsLoaded) {
-      return <AppLoading />;
+      return (
+        <AppLoading />
+        );
     } else {
       return (
         <View style={styles.container}>

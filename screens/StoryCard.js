@@ -36,7 +36,9 @@ export default class StoryCard extends Component {
 
   render() {
     if (!this.state.fontsLoaded) {
-      return <AppLoading />;
+      return (
+        <AppLoading />
+        );
     } else {
       return (
         <View style={styles.container}>
